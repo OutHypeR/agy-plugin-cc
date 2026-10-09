@@ -725,7 +725,7 @@ function cmdSetup(argv) {
     out.push(st.ok ? "usage tracking: on (agy's statusLine feeds ~/.claude/agy-companion/usage.json)" : `usage tracking: off - ${st.reason}`);
     const L = lanes();
     const f = (l) => (l ? `${Math.round(l.remaining * 100)}% left` : "not checked yet");
-    out.push(`usage: Antigravity Claude models ${f(L.agyClaude)}, Antigravity Gemini ${f(L.agyGemini)}`);
+    out.push(`usage: Antigravity Claude/GPT models ${f(L.agyClaude)}, Antigravity Gemini ${f(L.agyGemini)}`);
   }
   const g = geminiApiStatus();
   const cfg = loadConfig();
@@ -756,7 +756,7 @@ function checkQuota(model) {
   if (!lane || lane.age > 30 * 60000 || lane.remaining >= 0.03) return;
   const reset = lane.resetAt ? new Date(lane.resetAt).toLocaleString() : "later";
   die(
-    `Antigravity's ${model.startsWith("claude-") ? "Claude-model" : "Gemini"} quota is used up (${Math.round(lane.remaining * 100)}% left, resets ${reset}). ` +
+    `Antigravity's ${model.startsWith("claude-") ? "Claude/GPT-model" : "Gemini"} quota is used up (${Math.round(lane.remaining * 100)}% left, resets ${reset}). ` +
       (model.startsWith("claude-") ? "Use --model gemini-pro, or --gemini-api with your own API key." : "Use a Claude model, or --gemini-api with your own API key."),
   );
 }

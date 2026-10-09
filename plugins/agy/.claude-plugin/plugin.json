@@ -1,6 +1,6 @@
 {
   "name": "agy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial: hand tasks and reviews from Claude Code to Google's Antigravity CLI (agy), on your Google AI plan or your own Gemini API key.",
   "author": { "name": "OutHypeR" }
 }
