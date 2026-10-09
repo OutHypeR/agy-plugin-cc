@@ -1,0 +1,12 @@
+agy-plugin-cc
+Copyright 2026 OutHypeR
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Parts of this plugin follow openai/codex-plugin-cc (https://github.com/openai/codex-plugin-cc),
+Copyright 2026 OpenAI, licensed under the Apache License, Version 2.0: the overall layout
+(slash commands forwarding to a companion script, a thin forwarding subagent, background jobs with
+status/result/cancel) and the wording of the rescue command and the forwarding agent, adapted here
+for the Antigravity CLI. No source code was copied from that project.
+
+Not affiliated with or endorsed by Google, Anthropic or OpenAI.
